@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bloggify</title>
+        <meta charset="UTF-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles/create.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+        
+    </head>
+    <body>
+        <section id="header">
+
+        </section>
+        <form autocomplete="off" method="post">
+            <div id="first-div">
+                <label for="title">Title for the Blog:</label><br/>
+                <input style="background-color:transparent; " type="text" maxlength="30" name="blogtitle" placeholder="Title" id="title" autofocus >
+            </div>
+            <div id="second-div">
+                <label for="content">Content:</label><br/>
+                <textarea style="background-color:transparent;"  class="con-input" placeholder="Start typing..." type="textarea" name="blogcontent" id="content" ></textarea>
+            </div>
+            <div id="third-div">
+                <label for="Date">Date:</label>
+                <input style="background-color:transparent; " required class="con-date;" value= '<%= date %>' type="text" name="blogdate" id="date" >
+            </div>
+            <div>
+                <button type="submit" class="savebutton" formaction="/saveBlog">Save</button>
+                <button type="submit" formaction="/">Cancel</button>
+            </div>
+        </form>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(".savebutton").click(function(){
+                alert("Blog Saved");
+            });
+        </script>
+    </body>
+</html>
